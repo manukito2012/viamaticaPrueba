@@ -1,0 +1,31 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <!-- Información del usuario -->
+            <div class="col-12">
+                <div class="user-info">
+                    <h3>{{ usuarios.nombre }} {{ usuarios.apellido }}</h3>
+                    <p>ID: {{ usuarios.identificacion }}</p>
+                </div>
+            </div>
+
+            <!-- Lista de eventos -->
+            <div class="col-12">
+                <div class="event-cards">
+                    
+                    <div class="row">
+                        <div class="col-sm-4 mb-4" *ngFor="let usuarios of usuario">
+                            <div class="event-card">
+                            
+                                <p><strong>Sesion:</strong> {{ usuarios.event }}</p>
+                                <p><strong>Fecha:</strong> {{ usuarios.times| date:'yyyy-MM-dd HH:mm:ss' }}</p>
+                           
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

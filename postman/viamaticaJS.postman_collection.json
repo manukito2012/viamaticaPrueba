@@ -1,0 +1,420 @@
+{
+	"info": {
+		"_postman_id": "cdc1b19a-23a7-4135-8a57-6b3064d79460",
+		"name": "viamaticaJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34999303"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/usuarios/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n     \"nombre\": \"Emanuel25\",\r\n     \"apellido\":\"Guanuco25\",\r\n    \"identificacion\": \"1234567891\",\r\n    \"password\": \"Ema_2025\",\r\n    \"role\":\"admin\"\r\n        \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"register"
+					]
+				},
+				"description": "registrar usuario y rol"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \r\n        \"email\": \"eguanuco25@mail.com\",\r\n        \"password\": \"Ema_2025\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				},
+				"description": "loguearse"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/auth/logout/67ecb720e60cea5c2a89484d",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjM2NjBhNDk3ZDA5Zjk4YzAwMzBjZSIsIm5hbWUiOiJlZ3VhbnVjbzI1QG1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ0MDA0NjQ0LCJleHAiOjE3NDQwNzY2NDR9.wD3dDEzhV6trlAvUaOT-Ld_t0AldNtxKwTf_D8TcMlU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/logout/67f3660a497d09f98c0030ce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"logout",
+						"67f3660a497d09f98c0030ce"
+					]
+				},
+				"description": "logout"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/usuarios/sessions/67ecb8b0e60cea5c2a89488b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWQ2OTEzMTRiZjk0MDkwZGQ2OTFlZiIsIm5hbWUiOiJlZ3VhbnVjbzI1QG1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQzNjk5OTM2LCJleHAiOjE3NDM3NzE5MzZ9.dvD5gvDvVZpQ59ai5Qv7v4bCOzUy7VVsLCkEHX2VRtc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/sessions/67ed69c214bf94090dd691fd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"sessions",
+						"67ed69c214bf94090dd691fd"
+					]
+				},
+				"description": "ver las sesiones de cada usuario "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/usuarios/assign-role/67ecb6cce60cea5c2a894843",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjIxYTQ0M2JiYTkzZjYxOTMyZGFmMSIsIm5hbWUiOiJlZ3VhbnVjbzYxQG1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQzOTE5Njk3LCJleHAiOjE3NDM5OTE2OTd9.QsUd3stQ9w95NfaEeFRxYVj9zJw17zZm-HnjjBExnd4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"role\": \"usuario\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/assign-role/67f366d8497d09f98c0030e1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"assign-role",
+						"67f366d8497d09f98c0030e1"
+					]
+				},
+				"description": "asignar roles a usuario para admin"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/usuarios/upload",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjM2NjBhNDk3ZDA5Zjk4YzAwMzBjZSIsIm5hbWUiOiJlZ3VhbnVjbzI1QG1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ0MDA0NjQ0LCJleHAiOjE3NDQwNzY2NDR9.wD3dDEzhV6trlAvUaOT-Ld_t0AldNtxKwTf_D8TcMlU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"upload"
+					]
+				},
+				"description": "agregar archivo excel"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/usuarios/update/67ed69c214bf94090dd691fd",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjMxYzgyZmM2NTg3ZjE3YzZhOWZmNyIsIm5hbWUiOiJlZ3VhbnVjbzgwQG1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQzOTg1ODAzLCJleHAiOjE3NDQwNTc4MDN9.RRF5B8dTyA0YpZ87onKaOCWW3v4KTibODD4lglIUp4s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " \r\n {\r\n\"status\": \"activo\"\r\n    \r\n }    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/update/67f366d8497d09f98c0030e1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"update",
+						"67f366d8497d09f98c0030e1"
+					]
+				},
+				"description": "cambio de rol"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/usuarios/67f07f929b41bd892ec48df8",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjA3YWI3MGMzOTkxZWUxZmI1ZTA2ZiIsIm5hbWUiOiJlZ3VhbnVjbzI1QG1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQzODEzMzEyLCJleHAiOjE3NDM4ODUzMTJ9.hwtLLEp8CtHysetcNtq9OIzh-zcqM5V0U1fhOi6cbSE ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/usuarios/67f36740497d09f98c003100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"67f36740497d09f98c003100"
+					]
+				},
+				"description": "Eliminar Usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/usuarios/filter?apellido=Guanuco30",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjA3YWI3MGMzOTkxZWUxZmI1ZTA2ZiIsIm5hbWUiOiJlZ3VhbnVjbzI1QG1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQzODEzMzEyLCJleHAiOjE3NDM4ODUzMTJ9.hwtLLEp8CtHysetcNtq9OIzh-zcqM5V0U1fhOi6cbSE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/usuarios/filter?apellido=Guanuco30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "apellido",
+							"value": "Guanuco30"
+						}
+					]
+				},
+				"description": "Ver busqueda "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/usuarios/67f0a68584a029e3043e3f8d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWQ2OTEzMTRiZjk0MDkwZGQ2OTFlZiIsIm5hbWUiOiJlZ3VhbnVjbzI1QG1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQzNjI5ODYwLCJleHAiOjE3NDM3MDE4NjB9.XWZtUv1VenA0B_BOJCP5LzKX7dZnFyZb0gjlCKrdxmU",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/67f0a68584a029e3043e3f8d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"67f0a68584a029e3043e3f8d"
+					]
+				},
+				"description": "Ver usuario por id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/usuarios/sessions/public/67f3660a497d09f98c0030ce",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/usuarios/sessions/public/67f3660a497d09f98c0030ce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"sessions",
+						"public",
+						"67f3660a497d09f98c0030ce"
+					]
+				},
+				"description": "sesiones d eusers"
+			},
+			"response": []
+		}
+	]
+}

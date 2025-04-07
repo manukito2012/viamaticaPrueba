@@ -1,0 +1,22 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="card">
+                <div class="header">
+                    <h4 class="text-center title">USUARIO:</h4>
+                </div>
+                <div class="content">
+
+  
+                    <div class="upload-container">
+                        <input type="file" (change)="onFileSelected($event)" />
+                        <button (click)="onUpload()">Cargar Archivo</button>
+
+                        <p>{{ mensaje }}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
