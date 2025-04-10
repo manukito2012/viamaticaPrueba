@@ -1,0 +1,48 @@
+<section class="vh-100" style="background: radial-gradient(circle at top, rgba(255, 255, 255, 0.5) 0%, #448cc7 30%, #2c6ea3 100%);">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <figure class="col-md-6 col-lg-5 d-none d-md-block vh-100">
+              <img src="./../assets/img/usuario.jpg" alt="Login form visual representation" class="img-fluid h-100 w-100" style="border-radius: 1rem 0 0 1rem; object-fit: cover;" />
+            </figure>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+                <form>
+
+                  <div class="d-flex flex-column align-items-start mb-3 pb-1">
+                    <h1 class="fw-bold mb-0 text-uppercase" style="color: #2c3e50; letter-spacing: 2px;">VIAMATICA</h1>
+                    <h2 class="h5 text-muted" style="letter-spacing: 1px;">Soluciones digitales inteligentes</h2>
+                  </div>
+
+                  <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 0.5px;">Iniciá sesión en tu cuenta</h3>
+
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example17">Email address</label>
+                    <input type="email" id="form2Example17" class="form-control form-control-lg" [(ngModel)]="email" required name="email" placeholder="Correo electrónico" />
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example27">Password</label>
+                    <input type="password" id="form2Example27" class="form-control form-control-lg" [(ngModel)]="password" name="password" placeholder="Contraseña" required />
+                  </div>
+
+                  <div class="pt-1 mb-4">
+                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-dark btn-lg btn-block" type="button" (click)="userLogin()">Login</button>
+                  </div>
+
+                  <a class="small text-muted">Forgot password?</a>
+
+                  <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+                    {{ errorMessage }}
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

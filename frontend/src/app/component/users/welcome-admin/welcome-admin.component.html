@@ -1,0 +1,40 @@
+<section class="main-content">
+  <div class="container mt-5">
+    <div class="card shadow-lg p-4" style="max-width: 40%; margin-left: auto; margin-right: auto;"> 
+      <div class="card-body">
+        <h3 class="card-title text-center mb-4 text-black">
+          Bienvenido, <span class="text-uppercase">{{ usuario.nombre }}</span>!
+        </h3>
+        <div class="row">
+          <!-- Información adicional -->
+          <div class="col-md-6">
+            <h5 class="text-info mb-3">Información adicional:</h5>
+            <ul class="list-unstyled">
+              <li><strong class="font-weight-bold">Nombre:</strong> {{ usuario.nombre }}</li>
+              <li><strong class="font-weight-bold">Apellido:</strong> {{ usuario.apellido }}</li>
+              <li><strong class="font-weight-bold">Email:</strong> {{ usuario.email }}</li>
+              <li><strong class="font-weight-bold">Identificación:</strong> {{ usuario.identificacion }}</li>
+            </ul>
+          </div>
+
+          <!-- Detalles de la última sesión -->
+          <div class="col-md-6">
+            <h5 class="text-info mb-3">Detalles de tu última sesión:</h5>
+
+            <div *ngIf="sesiones.length > 0">
+              <ul class="list-unstyled">
+                <li>
+                  <p class="font-weight-bold">Sesión: <span class="text-primary">{{ sesiones[sesiones.length - 1].event }}</span></p>
+                  <p><strong>Fecha de inicio:</strong> {{ sesiones[sesiones.length - 1].times }}</p>
+                </li>
+              </ul>
+            </div>
+            <p *ngIf="sesiones.length === 0" class="text-muted">No hay sesiones registradas para este usuario.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,95 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="text-center title">Registrar Usuario</h4>
+                    </div>
+                    <div class="content">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Company </label>
+                                        <input type="text" class="form-control" disabled placeholder="Company"
+                                            value="Viamatica Solution">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>NOMBRE</label>
+                                        <input type="text" name="nombre" [(ngModel)]="usuario.nombre"
+                                            class="form-control" placeholder="Ingrese Nombre">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>APELLIDO</label>
+                                        <input type="text" name="apellido" [(ngModel)]="usuario.apellido"
+                                            class="form-control" placeholder="Ingrese Apellido">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>CORREO ELECTRONICO (OPCIONAL)</label>
+                                        <input type="text" name="email" [(ngModel)]="usuario.email" class="form-control"
+                                            placeholder="Ingrese Correo">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="text" name="password" [(ngModel)]="usuario.password"
+                                            class="form-control" placeholder="Ingrese Password">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>N° Identificacion</label>
+                                        <input type="string" name="identificacion" [(ngModel)]="usuario.identificacion"
+                                            class="form-control" placeholder="identificacion">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Estado</label>
+                                        <select class="form-control" name="status" [(ngModel)]="usuario.status">
+                                            <option value="activo">activo</option>
+                                            <option value="bloqueado">bloqueado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Rol</label>
+                                        <select class="form-control" name="role" [(ngModel)]="usuario.role">
+                                            <option value="usuario">usuario</option>
+                                            <option value="admin">admin</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button (click)="crearUsuario()" type="submit"
+                                class="mt-5 btn btn-info btn-fill pull-right">Crear Usuario</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

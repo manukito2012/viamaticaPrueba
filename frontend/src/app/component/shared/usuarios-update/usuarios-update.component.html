@@ -1,0 +1,116 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="text-center title">Registrar Usuario</h4>
+                    </div>
+                    <div class="content">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label>Company </label>
+                                        <input type="text" class="form-control" disabled placeholder="Company"
+                                            value="Viamatica Solution">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>NOMBRE</label>
+                                        <input type="text" class="form-control" name="nombre"
+                                            [(ngModel)]="usuario.nombre">
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>APELLIDO</label>
+                                        <input type="text" class="form-control" name="apellido"
+                                            [(ngModel)]="usuario.apellido">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>CORREO ELECTRONICO</label>
+                                        <input type="email" class="form-control" placeholder="Correo electrónico"
+                                            [(ngModel)]="usuario.email" name="email" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>N° Identificacion</label>
+                                        <input type="number" class="form-control" name="identificacion"
+                                            [(ngModel)]="usuario.identificacion">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Estado</label>
+                                        <select class="form-control" name="estado" [(ngModel)]="usuario.status">
+                                            <option value="activo">activo</option>
+                                            <option value="bloqueado">bloqueado</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Rol</label>
+                                        <select class="form-control" name="estado" [(ngModel)]="usuario.role">
+                                            <option value="usuario">usuario</option>
+                                            <option value="admin">admin</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="btn-container">
+                                <button (click)="modificarUsuario()" type="submit"
+                                    class="btn btn-info btn-fill">ACTUALIZAR USUARIO</button>
+                                <button (click)="volverWelcome()" type="button" class="btn btn-success">VOLVER</button>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-user">
+                    <div class="image">
+                    </div>
+                    <div class="content text-center">
+                        <div class="author">
+                            <a href="#">
+                                <img class="avatar border-gray" src="assets/img/faces/face-3.jpg" alt="..." />
+                                <h4 class="title">Mike Andrew<br />
+                                    <small>michael24</small>
+                                </h4>
+                            </a>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        <button href="#" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
+                        <button href="#" class="btn btn-simple"><i class="fa fa-twitter"></i></button>
+                        <button href="#" class="btn btn-simple"><i class="fa fa-google-plus-square"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

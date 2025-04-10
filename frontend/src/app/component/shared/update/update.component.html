@@ -1,0 +1,61 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <!-- Barra de búsqueda -->
+      <section class="d-flex mb-4 mt-4">
+        <input class="form-control me-2" type="text" [(ngModel)]="busqueda"
+          placeholder="Buscar por Nombre o Identificación" aria-label="Buscar usuarios"
+          aria-describedby="search-help-text">
+        <button type="button" (click)="buscarUsuarios()" class="btn btn-outline-success">
+          BUSCAR
+        </button>
+      </section>
+
+      <section class="card">
+        <header class="header">
+          <h4 class="text-center title">USUARIO:</h4>
+        </header>
+        <div class="content">
+          <form>
+
+            <div *ngIf="searchRealizada && usuarios.length === 0" class="row">
+              <p>No se encontraron usuarios.</p>
+            </div>
+
+            <!-- Información del usuario -->
+            <div *ngIf="usuarios.length > 0" class="row">
+              <article *ngFor="let usuario of usuarios" class="col-md-5">
+                <div class="form-group">
+                  <label for="nombre-{{usuario.identificacion}}">NOMBRE</label>
+                  <input type="text" id="nombre-{{usuario.identificacion}}" class="form-control" disabled
+                    [value]="usuario.nombre" placeholder="Viamatica">
+                </div>
+                <div class="form-group">
+                  <label for="apellido-{{usuario.identificacion}}">APELLIDO</label>
+                  <input type="text" id="apellido-{{usuario.identificacion}}" class="form-control" disabled
+                    [value]="usuario.apellido" placeholder="Viamatica">
+                </div>
+                <div class="form-group">
+                  <label for="identificacion-{{usuario.identificacion}}">N° IDENTIFICACION</label>
+                  <input type="text" id="identificacion-{{usuario.identificacion}}" class="form-control" disabled
+                    [value]="usuario.identificacion" placeholder="Viamatica">
+                </div>
+                <div class="form-group">
+                  <label for="email-{{usuario.identificacion}}">Email</label>
+                  <input type="text" id="email-{{usuario.identificacion}}" class="form-control" disabled
+                    [value]="usuario.email" placeholder="Viamatica">
+                </div>
+                <div class="form-group">
+                  <label for="role-{{usuario.identificacion}}">ROL</label>
+                  <input type="text" id="role-{{usuario.identificacion}}" class="form-control" disabled
+                    [value]="usuario.role" placeholder="Viamatica">
+                </div>
+              </article>
+            </div>
+
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

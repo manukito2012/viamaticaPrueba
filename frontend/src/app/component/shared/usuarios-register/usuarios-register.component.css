@@ -1,0 +1,17 @@
+
+.main-content {
+    margin-top: 20px; 
+    
+}
+.card {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+.container-fluid {
+    height: 100%;
+    display: flex;
+    
+    justify-content: center; 
+}

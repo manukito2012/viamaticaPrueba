@@ -1,0 +1,60 @@
+<div class="row justify-content-center ">
+  <section class="col-12 col-sm-12 col-md-11 contenedor">
+    <h1 class="text-center">USUARIOS REGISTRADOS</h1>
+    <table class="table table-hover table table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">N° de Identificacion</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Correo Electronico</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Rol</th>
+          <th scope="col"></th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+
+          <th>#</th>
+          <td>{{usuario.identificacion}}</td>
+          <td>{{usuario.nombre}}</td>
+          <td>{{usuario.apellido}}</td>
+          <td>{{usuario.email}}</td>
+          <td>{{usuario.status}}</td>
+          <td>{{usuario.role}}</td>
+
+          <td>
+            <div class="btn-lista-promocion">
+              <button *ngIf="usuario.role === 'usuario'" type="button" class="btn btn-success"
+                (click)="modificarUsuario(usuario._id)">Actualizar</button>
+              <button *ngIf="usuario.role === 'usuario'" type="submit" class="btn btn-info btn-fill"
+                (click)="sesionesUsuario(usuario._id)">SESIONES</button>
+              <button *ngIf="usuario.role === 'usuario'" type="submit" class="btn btn-danger btn-fill"
+                (click)="openDeleteModal(usuario._id)">ELIMINAR</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<!-- Modal de Confirmación -->
+<div *ngIf="showModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4>Confirmar eliminación</h4>
+      <button (click)="closeDeleteModal()" class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>¿Está seguro de que desea eliminar este usuario?</p>
+    </div>
+    <div class="modal-footer">
+      <button (click)="closeDeleteModal()" class="btn btn-secondary">Cancelar</button>
+      <button (click)="eliminarUsuario(usuarioIdEliminar); closeDeleteModal()" class="btn btn-danger">Eliminar</button>
+    </div>
+  </div>
+</div>
