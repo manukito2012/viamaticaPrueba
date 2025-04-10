@@ -1,42 +1,33 @@
 # Proyecto Viamatica
 
-Este es el proyecto Viamatica, una aplicación full-stack que utiliza **Angular** para el frontend y **NestJS** para el backend. A continuación se proporciona información sobre las versiones de las tecnologías utilizadas, así como las instrucciones para instalar y ejecutar el sistema.
+Este es el proyecto Viamatica, una aplicación full-stack que utiliza **Angular** para el frontend y **Express** para el backend. A continuación se proporciona información sobre las versiones de las tecnologías utilizadas, así como las instrucciones para instalar y ejecutar el sistema.
 
 ## Tecnologías Utilizadas
 
 - **Node.js**: v20.12.12
 - **Angular**: v17
-- **NestJS**: v11.0.1
+- **Express**: v5.1.0
 - **Bootstrap**: v5
 - **MongoDB**: Base de datos NoSQL para el backend.
 
 ## Instalación
-### Backend (NestJS)
+### Backend (Express)
 En la parte de backend
--cd viamatica-backend
+-cd backend
 -npm install
--npm install @nestjs/mongoose mongoose
+-npm install express --save
+-npm install cors --save
+-npm install mongoose --save
 
 
 Para la base de datos :
-Luego, en tu AppModule debes importar el MongooseModule y configurar la conexión con la URI de MongoDB :
- Si estás usando MongoDB en tu máquina local, la URI será: mongodb://localhost/viamaticajs . (al final colo el nombre que se creara en tu base de dato de mongoDB).
-
-@Module({
-  imports: [
-    MongooseModule.forRoot('mongodb://localhost/viamaticajs'),
-    JwtModule.register({
-      secret: 'KeyViamatica',
-      signOptions: { expiresIn: '1h' },
-    }),
-    UsuariosModule,
-    AuthModule
-  ],
-
-
+Luego, en tu database.js (const URI = 'mongodb://127.0.0.1/viamatica2025';) en tu mongoodb local cambias 
+el final creando la tabla local.
+ 
 Luego inicias el proyecto
 
--npm run start
+-npm run dev (si es que instalas- npm install nodemon -D) o 
+sino node index.js
 
 
 ### Frontend (Angular v17) 
@@ -61,7 +52,9 @@ crear un usuario Admin en la base de datos para poder realizar pruebas de acceso
 
 Puedes crear un admin usando las rutas de registro del backend.
 
-
+## Ejemplo archivoo excel
+Tambien se encuentra un Ejemplo de un archivo excel para subir en el front o postman en el metodo 
+de carga masiva de usuarios
 ---
 
 ## Finalización
