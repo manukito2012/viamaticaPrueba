@@ -31,7 +31,7 @@ export class CargarchivosComponent {
     this.usuarioService.uploadUsers(this.selectedFile).subscribe(
       (response: any) => {
         this.mensaje = response.message;
-        alert('USUARIOS CARGADOS');
+        window.alert('LISTA DE USUARIOS CARGADOS.');
       },
       (error) => {
         window.alert('¡Error al cargar el archivo!');

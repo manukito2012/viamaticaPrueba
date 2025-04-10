@@ -10,7 +10,8 @@
                         <form (submit)="onUpload()">
                             <label for="file-upload" class="visually-hidden">Seleccionar archivo</label>
                             <input type="file" id="file-upload" (change)="onFileSelected($event)" />
-                            <button class="btn btn-primary" type="submit">Cargar Archivo</button>
+                            <button class="btn btn-primary" type="button" (click)="onUpload()">Cargar Archivo</button>
+
                         </form>
                         <p>{{ mensaje }}</p>
                     </section>
